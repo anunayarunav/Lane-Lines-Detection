@@ -12,11 +12,6 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
 ---
 
 ### Reflection
@@ -25,12 +20,12 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale. After that, I applied a guassian blur of kernel size 7. Canny edge detection was followed, and I noticed that the 50 and 150 as low and high thresholds, respectively did quite good. After that I applied selection for region of interest as doing that before edge detection would have detected the boundary lines as edges as well. Then the hough line transform were applied. Hough line parameters were selected so that, even a small line should be detected(minimum number of votes were 10), but length was constrained not to be too small. The images are as follows:
 
-![output_solidWhiteCurve.jpg][test_images/output_solidWhiteCurve.jpg],
-![output_solidWhiteRight.jpg][test_images/output_solidWhiteRight.jpg],
-![output_solidYellowCurve.jpg][test_images/output_solidYellowCurve.jpg],
-![output_solidYellowCurve2.jpg][test_images/output_solidYellowCurve2.jpg],
-![output_solidYellowLeft.jpg][test_images/output_solidYellowLeft.jpg],
-![output_whiteCarLaneSwitch.jpg][test_images/output_whiteCarLaneSwitch.jpg],
+<img src="test_images/output_solidWhiteCurve.jpg" width="480" alt="" />
+<img src="test_images/output_solidWhiteRight.jpg" width="480" alt="" />
+<img src="test_images/output_solidYellowCurve.jpg" width="480" alt="" />
+<img src="test_images/output_solidYellowCurve2.jpg" width="480" alt="" />
+<img src="test_images/output_solidYellowLeft.jpg" width="480" alt="" />
+<img src="test_images/output_whiteCarLaneSwitch.jpg" width="480" alt="" />
 
 In order to draw a single line on the left and right lanes, I first made the draw_lines()_ modular by adding an extra parameter named extrapolate (=0, by default). So that I could switch between naive lines and extrapolated lines to draw. Then in order to extrapolate I first separated the left lanes from right lanes by using **slope** as a criterian, that is negative slope for left lane and positive slope for right lane to be specific. In between some check for outlier values was done and unlikely points were eliminated. 
 
