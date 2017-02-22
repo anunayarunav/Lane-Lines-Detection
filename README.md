@@ -32,22 +32,28 @@ In order to draw a single line on the left and right lanes, I first made the dra
 Here is how to whole pipeline works shown for a single image
 
 #### Grayscale
-![alt output_gray_solidWhiteCurve.jpg][src test_images/output_gray_solidWhiteCurve.jpg],
+
+<img src="test_images/output_gray_solidWhiteCurve.jpg" width="480" alt="" />
 
 #### Edge filter
-![output_edge_solidWhiteCurve.jpg][test_images/output_edge_solidWhiteCurve.jpg],
+
+<img src="test_images/output_edge_solidWhiteCurve.jpg" width="480" alt="" />
 
 #### Region of interest
-![output_roi_solidWhiteCurve.jpg][test_images/output_roi_solidWhiteCurve.jpg],
+
+<img src="test_images/output_roi_solidWhiteCurve.jpg" width="480" alt="" />
 
 #### Lane Lines over edges
-![output_line_image_solidWhiteCurve.jpg][test_images/output_line_image_solidWhiteCurve.jpg],
+
+<img src="test_images/output_line_image_solidWhiteCurve.jpg" width="480" alt="" />
 
 #### Lane lines over original image
-![output_solidWhiteCurve.jpg][test_images/output_solidWhiteCurve.jpg],
+
+<img src="test_images/output_solidWhiteCurve.jpg" width="480" alt="" />
 
 #### Extrapolated lane lines
-![output_solidWhiteCurve.jpg][test_images/output_solidWhiteCurve.jpg],
+
+<img src="test_images/output_solidWhiteCurve.jpg" width="480" alt="" />
 
 ###2. Identify potential shortcomings with your current pipeline
 
@@ -65,3 +71,7 @@ There can be several possible improvements.
 1. The drawlines can be improved significantly to remove outliers. For example, there is a line identified as a lane line deviates significantly most of the lines that can be removed by seeing if its parameters (slope, for example) does not fit with the data. 
 
 2. The region of interest coded right now is a quadrilateral. Other more specific non-convex polygons can be tried with 8-10 vertices to pinpoint the lane lines more accurately.
+
+#### Note:
+
+There is a file P1.html in the repo, which has been exported from the notebook to show the outputs that was produced.
